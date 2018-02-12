@@ -1,41 +1,45 @@
-#include <iostream>
+#include<iostream> //to do different operations with two numbers
 using namespace std;
 int main()
 {
 	char ch;
-	float n1, n2;
-	cout<<"\tENTER TWO NUMBERS\n ";
-	cin>>n1>>n2;
+    int x;
+	int y;
+	cout<<"ENTER TWO NUMBERS : \n";
+	cin>>x>>y;
 	do
 	{
-		cout<<"\nNUMBER 1: "<<n1<<"\tNUMBER 2: "<<n2;
-		cout<<"\n\t\tOPERATOR MENU";
-		cout<<"\n\t1. ADDITION (+) ";
-		cout<<"\n\t2. SUBTRACTION (-) ";
-		cout<<"\n\t3. MULTIPLICATION (*)";
-		cout<<"\n\t4. DIVISION (/) ";
-		cout<<"\n\t5. EXIT (E)";
-		cout<<"\nENTER OPTION NUMBER OR OPERATOR:  ";
-		cin>>ch;
-		switch(ch)
-		{
-			case '1' :
-			case '+' : cout<<n1<<" + "<<n2<<" = "<<n1+n2;
-			          break;
-			case '2' :
-			case '-' : cout<<n1<<" - "<<n2<<" = "<<n1-n2;
-			          break;
-			case '3' :
-			case '*' :cout<<n1<<" * "<<n2<<" = "<<n1*n2;
-			          break;
-			case '4' :
-			case '/' :cout<<n1<<" / "<<n2<<" = "<<n1/n2;
-			          break;
-		    case '5' :
+		cout<<" NUMBER1 = "<<x<<" NUMBER2 = "<<y<<"\n";
+		cout<<"\t 1. ADDITION (+)\n";
+		cout<<"\t 2. SUBTRACTION (-)\n";
+		cout<<"\t 3. MULTIPLICATION(*)\n";
+		cout<<"\t 4. DIVISION(/)\n";
+		cout<<"\t 5. MODULUS (5) \n";
+		cout<<"\t 6. ENTER TO EXIT (E)\n";
+		cout<<"\t ENTER THE OPTION NUMBER OR OPERATOR \n";
+	cin>>ch;
+	switch(ch)
+	 {
+			case '1' : 
+			case '+' :cout<<x+y<<"\n";
+			break;
+			case '2' : 
+			case '-' :cout<<x-y<<"\n ";
+			break ;
+			case '3' : 
+			case '*' :cout<<x*y<<" \n";
+			break ;
+			case '4' : 
+			case '/' :cout<<x/y<<"\n ";
+			break ;
+			case '5' : 
+			case '%' :cout<<x%y<<"\n ";
+			break ;
+			case '6' : 
 			case 'E' :
-		    case 'e' :cout<<"\tThank You For Using The Program\n";
-			          break;
-			 default : cout<<"INVALID CHOICE !!";
-				  }
-			  } while(ch!='5' && ch!='E' && ch!='e');
-		  }
+			case 'e' :cout<<"THANK YOU FOR USING THE PROGRAM\n";
+			break;
+			default : cout<<"INVALID CHOICE\n";
+	 } 
+  } while ( ch != 'e' && ch !='E' && ch != '6' );
+}
